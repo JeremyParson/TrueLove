@@ -1,0 +1,55 @@
+.namebox{
+    /* height: 80px;
+    width: 10px; */
+    border: 10px solid rgba(255, 0, 234, 0.527);
+    padding:10px;
+    margin: 10px; 
+    display: flex; 
+    flex-direction: column;
+    background-color: white;
+    filter: grayscale(100%);
+ }
+ .namebox:not(:hover){
+    animation-name: grayscaleEffect;
+    animation-duration: 2s;
+ }
+ 
+ .namebox:hover{
+    animation-name: grayscaleEffect2;
+    animation-duration: 10s;
+ }
+ 
+ body{
+    display: flex;
+    flex-flow: row wrap;
+    background-image: linear-gradient(rgba(247, 175, 233,.6),rgba(247, 175, 233,.6)),url("./heartsBackground.jpg")
+ } 
+ #logo{ 
+    display: flex; 
+    flex-direction: column;
+    font-family: 'Pinyon Script', cursive;
+    color:red
+ }
+ #heart{
+    height:200px;
+ }
+ 
+ @keyframes grayscaleEffect {
+    from {filter: grayscale(0%);}
+    to {filter: grayscale(100%);}
+ }
+ 
+ @keyframes grayscaleEffect2{
+    from {filter: grayscale(100%);}
+    to {filter: grayscale(0%);}
+ }
+
+ .target{
+    border: 10px solid rgba(255, 0, 234, 0.527);
+    padding:10px;
+    margin: 10px; 
+    display: flex; 
+    flex-direction: column;
+    background-color: white;
+    filter: grayscale(0%);
+ }
