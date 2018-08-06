@@ -1,8 +1,8 @@
 body{
     display: flex;
     justify-content: center;
-    background: linear-gradient(rgba(155,155,155,0.50),rgba(155,155,155,0.50)), url("./heartsBackground.jpg");
-    background: url("Logo.png")
+    background: linear-gradient(rgba(226, 0, 158, 0.5),rgba(155,155,155,0.50)), url("./heartsBackground.jpg");
+    
 }
 
 #main-container{

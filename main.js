@@ -9,17 +9,32 @@ function getUrlVars() {
   });
   indexNum = vars;
   indexNum = parseInt(indexNum.index);
-  return indexNum
+  console.log(vars);
+  return vars;
 }
 
 //This will get the index number input from the previous page
-indexNum = getUrlVars();
+indexNum = getUrlVars().index;
+let data;
+let dataSeed = getUrlVars().dataSeed; //create a data variable
 
 console.log(indexNum);
 
 AOS.init({
   duration: 1200,
 })
+
+
+fetch(`https://randomuser.me/api?seed=${dataSeed}&results=500`)
+.then(function(response){
+    return response.json();
+})
+.then(function(myjson){
+    data = myjson;
+    console.log(data);
+}).then(function(){
+
+
 
 //Create Info Variables
   let fullName = data.results[indexNum].name.title.toUpperCase() + "."
@@ -38,13 +53,6 @@ AOS.init({
   let accountAge = data.results[indexNum].registered.age;
   let registrationDate = data.results[indexNum].registered.date;
 //Used yo replace password characters with periods for security reasons
-  function hidePassword(password){
-      let hiddenPass = "";
-    for(let i in password){
-        hiddenPass += "."
-    }
-    return hiddenPass;
-  }
   //Display Info on page
   document.getElementById("account-image").src = data.results[indexNum].picture.large;
   document.getElementById("name").innerText = fullName;
@@ -98,8 +106,6 @@ AOS.init({
 
     targetDiv.appendChild(newForm);
 
-  })
-
   //This will change the user info
 
   function submit(event){
@@ -123,5 +129,22 @@ AOS.init({
       document.getElementById("Password").innerHTML = hidePassword(passwordInput.value);
     }
 
-    }
   }
+}})
+});
+
+function returnSeed(){
+  return dataSeed;
+}
+
+function hidePassword(password){
+  let hiddenPass = "";
+for(let i in password){
+    hiddenPass += "."
+}
+return hiddenPass;
+}
+
+function filterData(){
+  alert('FILTER!');
+}

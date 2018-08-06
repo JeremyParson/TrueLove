@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <script src = "https://unpkg.com/aos@2.3.0/dist/aos.js" defer></script>
-    <script src = "data.js" defer></script>
-    <script src = "main.js" defer></script>
+    <script src="https://unpkg.com/aos@2.3.0/dist/aos.js" defer></script>
+    <script src="data.js" defer></script>
+    <script src="main.js" defer></script>
 
     <link href="https://fonts.googleapis.com/css?family=Questrial" rel="stylesheet">
-    <link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet">    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link href="https://unpkg.com/aos@2.3.0/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="./style.css">
     <link rel="stylesheet" type="text/css" href="./style.css">
 </head>
+
 <body>
-        <button onclick="window.location.href='./index.html'">back</button>
-    <div id = "main-container">
-    <div id = "public_info" class = "account-info item" data-aos="zoom-in">
-        
-        <h1>Public Info</h1>
-        <img id = "account-image" src = "">
-        <h2 id = "name"></h2>
-        <h2>Gender</h2>
-        <h3 id = "gender"></h3>
-        <h2>Birth Date</h2>
-        <h3 id = "dob"></h3>
-        <!-- <button id = "Change-public-info">Change Public Info</button> -->
-        <hr>
-    </div>
+    <button onclick="window.location.href='./index.html'">back</button>
+    <div id="main-container">
+        <select>
+            <option value="Username">Username</option>
+            <option value="Account">Account</option>
+            <option value="Email">Email</option>
+           <option value="Matches">Matches</option>
+        </select>
 
+<!-- BUTTON HERE -->  
+<button type="button" onclick="filterData()">Filter</button>
 
-    <div id = "private_info" class = "account-info" data-aos="zoom-in">
-        <h1>Account Info</h1>
-        <h2>Email</h2>
-            <h3 id = "Email"></h3>
-        <h2>Username</h2>
-            <h3 id = "Username"></h3>
-        <!-- <h2>Password</h2>
-            <h3 id = "Password"></h3> -->
+        <div id="public_info" class="account-info item" data-aos="zoom-in">
+
+            <h1>Public Info</h1>
+            <img id="account-image" src="">
+            <h2 id="name"></h2>
+            <h2>Gender</h2>
+            <h3 id="gender"></h3>
+            <h2>Birth Date</h2>
+            <h3 id="dob"></h3>
+            <!-- <button id = "Change-public-info">Change Public Info</button> -->
             <hr>
-            <!-- <button id = "Change-account-info">Change Account Info</button> -->
-            <div id = "info-change" ></div>
-    </div>
-
-    <div id = "Account_logistics" class = "account-info" data-aos="zoom-in">
-            <h1>Account Info</h1>
-            <h2>Registered</h2>
-                <h3 id = "registration-date"></h3>
-            <h2>Acount Age</h2>
-                <h3 id = "acount-age"></h3>
-                <hr>
         </div>
 
-    <div class = "account-info" data-aos="zoom-in">
+        <div id="private_info" class="account-info" data-aos="zoom-in">
+            <h1>Account Info</h1>
+            <h2>Email</h2>
+            <h3 id="Email"></h3>
+            <h2>Username</h2>
+            <h3 id="Username"></h3>
+            <h2>Password</h2>
+            <h3 id="Password"></h3>
+            <hr>
+            <button id="Change-account-info">Change Account Info</button>
+            <div id="info-change"></div>
+        </div>
+        <div id="Account_logistics" class="account-info" data-aos="zoom-in">
+            <h1>Account Info</h1>
+            <h2>Registered</h2>
+            <h3 id="registration-date"></h3>
+            <h2>Acount Age</h2>
+            <h3 id="acount-age"></h3>
+            <hr>
+        </div>
+
+        <div class="account-info" data-aos="zoom-in">
             <form action="">
-                    <input type="text" name="index" value="IndexNum" />
-                    <input type="submit" value="Send data">
-                  </form>
+                <input type="text" name="index" value="IndexNum" />
+                <input type="submit" value="Send data">
+            </form>
+        </div>
+
     </div>
 
-    
-
-</div>
-
 </body>
+
 </html>

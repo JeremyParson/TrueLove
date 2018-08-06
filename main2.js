@@ -1,3 +1,12 @@
+let data;
+fetch('https://randomuser.me/api?results=500')
+.then(function(response){
+    return response.json();
+})
+.then(function(myjson){
+    data = myjson;
+    console.log(data);
+
 for (let i=0; i<data.results.length;i++){ 
     let nameBox= document.createElement("div"); 
     nameBox.id = data.results[i].name.first;
@@ -23,7 +32,7 @@ for (let i=0; i<data.results.length;i++){
     document.body.appendChild(nameBox);
     let loveMePlz = document.createElement('button');
     // loveMePlz.onclick = `"window.location.href=./index2.html?index = ${i}"`;
-    loveMePlz.setAttribute('onclick', `window.location.href="./index2.html?index=${i}"`);
+    loveMePlz.setAttribute('onclick', `window.location.href="./index2.html?index=${i}&dataSeed=${data.info.seed}"`);
     loveMePlz.innerText = "Love Me";
     nameBox.appendChild(loveMePlz);
  }
@@ -80,4 +89,4 @@ for (let i=0; i<data.results.length;i++){
     }
  }
 
- 
+});
