@@ -2,6 +2,7 @@ body{
     display: flex;
     justify-content: center;
     background: linear-gradient(rgba(155,155,155,0.50),rgba(155,155,155,0.50)), url("./heartsBackground.jpg");
+    background: url("Logo.png")
 }
 
 #main-container{
